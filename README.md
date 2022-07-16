@@ -5,12 +5,19 @@ The Plant-DTI is implemented as a web application tool and freely available at h
 
 ## Prerequisite install
 To run this code requires:
+
 python 3.6
+
 pandas module
+
 numpy module
+
 matplotlib module
+
 scikit-learn module
+
 pickle module
+
 textwrap module
 
 ## Data
