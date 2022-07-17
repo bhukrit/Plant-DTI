@@ -23,8 +23,8 @@ This folder contains train and test data of Plant-DTI which used as input for co
 ## OUTPUT
 Constructed model and hyperparameter optimiztion results will be generated in this folder. 
 
-## model_construction.ipynb
-This code is for model construction which Plant-DTI used random forest classifier with number of trees is 100.
+## train.ipynb
+This code is for training the model which Plant-DTI used random forest classifier with number of trees is 100.
 
 We use Random within model length 7 as an example to show the model training process. For other model, Please change the input data to before training.
 
