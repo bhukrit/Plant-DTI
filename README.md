@@ -1,7 +1,10 @@
 # Plant-DTI
-Python jupyter notebook for constructing Plant-DTI model and optimize the hyperparameter of the model.
 
-The Plant-DTI is implemented as a web application tool and freely available at https://bml.kmutt.ac.th/Plant-DTI.
+This repository provided train, test data, and python codes in jupyter notebook for constructing Plant-DTI model and optimize the hyperparameter of the model.
+
+Users can download this repository to run all codes provided.
+
+To predict the DBD-TFBS interactions, the Plant-DTI is implemented as a web application tool and freely available at https://bml.kmutt.ac.th/Plant-DTI.
 
 ## Prerequisite install
 To run this code requires:
