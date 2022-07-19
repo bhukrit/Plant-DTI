@@ -1,0 +1,68 @@
+#Pseudocode for model construction with Random Forest classifier using scikit learn: Random within model (RW).
+BEGIN
+FOR i = 7 to 15 do
+	read feature of train data
+	read label of train data
+	read features of test data
+	read label of test data
+	
+	train model using random forest classifier from scikit learn with number of trees = 100
+	save trained model in .sav file
+	
+	predict features of test data by using trained random forest model
+	evaluate model performance by compare predicted result with label of test data
+	collect model performance results
+END FOR loop
+write summary model performance in .csv file
+END
+
+
+#Pseudocode for model construction with Random Forest classifier using scikit learn: Random pairs model (RP).
+BEGIN
+FOR i = 7 to 14 do
+	read features of train data
+	read label of train data
+	read features of test data
+	read labels of test data
+
+	train model using random forest classifier from scikit learn with number of trees= 100
+	save trained model in .sav file
+	
+	predict features of test data by using trained random forest model
+	evaluate model performance by compare predicted result with label of test data
+	collect model performance results
+END for loop
+write summary model performance in .csv file
+END
+
+
+#Pseudocode for model hyperparameter tuning with Random Forest classifier using scikit learn: Random within model (RW).
+BEGIN
+FOR i = 7 to 15 do
+	read features of train data
+	read label of train data
+	read features of test data
+	read labels of test data
+
+	SET model to RandomForestClassifier
+	SET number of trees range from 1 to 150
+	SET number of kfold cross validation to 10
+	optimize the model using GridSearchCV
+	collect GridSearch result in .csv file
+END
+
+
+#Pseudocode for model hyperparameter tuning with Random Forest classifier using scikit learn: Random pairs model (RP).
+BEGIN
+for i = 7 to 14 do
+	read features of train data
+	read label of train data
+	read features of test data
+	read labels of test data
+
+	SET model to RandomForestClassifier
+	SET number of trees range from 1 to 150
+	SET number of kfold cross validation to 10
+	optimize the model using GridSearchCV
+	collect GridSearch result in .csv file
+END
