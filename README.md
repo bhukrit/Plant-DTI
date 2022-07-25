@@ -2,7 +2,7 @@
 ####   Copyright © 2022 Center for Agricultural Systems Biology
 ####   Authorship and citation: Ruengsrichaiya B., Nukoolkit C., Kalapanulak S. and Saithong T., (202x) Plant-DTI: Extending the landscape of TF protein and DNA interaction in plants by a machine learning-based approach. xxxxx., xx, xxx. (in preperation).
 ####   Contact: bhukrit.r@mail.kmutt.ac.th
----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
 This repository provided train, test data, and python codes in jupyter notebook for constructing Plant-DTI model and optimize the hyperparameter of the model.
 
 Users can download this repository to run all codes provided.
