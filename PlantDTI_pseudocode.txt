@@ -1,0 +1,120 @@
+################################################################################################################
+#
+#   Copyright © 2022 Center for Agricultural Systems Biology
+#   Authorships: Ruengsrichaiya B., Nukoolkit C., Kalapanulak S. and Saithong T., 
+#   (202x) Plant-DTI: Extending the landscape of TF protein and DNA interaction in plants by a machine learning-based approach. 
+#   xxxxx., xx, xxx. (in preperation). 
+#   Contact: bhukrit.r@mail.kmutt.ac.th
+#
+################################################################################################################
+#   
+#   Pseudocode for model Plant-DTI model construction with Random Forest classifier using scikit learn: 
+#   Classes labeled  are 1 (interacted) and 0 (not interacted)
+#   Random within models (RW) are avaiable for TFBS length range from 7-15 bp.
+#   Random pairs models (RP) are avaiable for TFBS length range from 7-14 bp.
+#
+################################################################################################################
+#
+#   Random pairs models (RP)
+#
+################################################################################################################
+
+INPUT: Feature of train data, feature of traintest data, class label of train data and, class label of test data
+OUTPUT: Plant-DTI model and its performances.
+    
+BEGIN
+FOR i = 7 to 15 do
+    Read feature of train data
+    Read class label of train data
+    Read features of test data
+    Read class label of test data
+
+    Train model using random forest classifier from scikit learn with number of trees = 100
+    Save trained model in .sav file
+
+    Predict features of test data by using trained random forest model
+    Evaluate model performance by compare predicted result with label of test data
+    Collect model performance results
+END FOR loop
+Write summary model performance in .csv file
+END
+
+################################################################################################################
+#
+#   Random within models (RW)
+#
+################################################################################################################
+
+INPUT: Feature of train data, feature of traintest data, class label of train data and, class label of test data
+OUTPUT: Plant-DTI model and its performances.
+    
+BEGIN
+FOR i = 7 to 14 do
+    read features of train data
+    Read class label of train data
+    Read features of test data
+    Read class labels of test data
+
+    Train model using random forest classifier from scikit learn with number of trees= 100
+    Save trained model in .sav file
+
+    Predict features of test data by using trained random forest model
+    Evaluate model performance by compare predicted result with label of test data
+    Collect model performance results
+END FOR loop
+Write summary model performance in .csv file
+END
+
+################################################################################################################
+#   
+#   Pseudocode for model hyperparameter tuning with Random Forest classifier using scikit learn:
+#   Automatically optimized hyperparameter of each model using GridSearchCV package
+#   Classes labeled  are 1 (interacted) and 0 (not interacted)
+#   Random within models (RW) are avaiable for TFBS length range from 7-15 bp.
+#   Random pairs models (RP) are avaiable for TFBS length range from 7-14 bp.
+#
+################################################################################################################
+#
+#   Random pairs models (RP)
+#
+################################################################################################################
+
+INPUT: Feature of train data, feature of traintest data, class label of train data and, class label of test data
+OUTPUT: Hyperparameters of Plant-DTI model and its performances.
+    
+BEGIN
+for i = 7 to 14 do
+    read features of train data
+    read class label of train data
+    read features of test data
+    read class labels of test data
+
+    SET model to RandomForestClassifier
+    SET number of trees range from 1 to 150
+    SET number of kfold cross validation to 10
+    Automatically optimize the model using GridSearchCV
+    Collect GridSearch results in .csv file
+END
+
+################################################################################################################
+#
+#   Random within models (RW)
+#
+################################################################################################################
+
+INPUT: Feature of train data, feature of traintest data, class label of train data and, class label of test data
+OUTPUT: Hyperparameters of Plant-DTI model and its performances.
+    
+BEGIN
+FOR i = 7 to 15 do
+    Read features of train data
+    Read class label of train data
+    Read features of test data
+    Read class label of test data
+
+    SET model to RandomForestClassifier
+    SET number of trees range from 1 to 150
+    SET number of kfold cross validation to 10
+    Automatically optimize the model using GridSearchCV
+    Collect GridSearch results in .csv file
+END
