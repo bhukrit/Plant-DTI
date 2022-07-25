@@ -9,11 +9,11 @@ To predict the DBD-TFBS interactions, the Plant-DTI is implemented as a web appl
 ## Prerequisite install
 To run this code requires:
 
-- python 3.6
-- pandas module
+- python >= 3.6 
+- pandas module 
 - numpy module
 - matplotlib module
-- scikit-learn module
+- scikit-learn module VERSION 0.23.2
 - pickle module
 - textwrap module
 
